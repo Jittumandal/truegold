@@ -10,6 +10,7 @@ import MaterialIcon from "../../components/common/MaterialIcon";
 import SideDrawer from "../../components/common/SideDrawer";
 import UpcomingSection from "../../components/dashboard/UpcomingSection";
 import { Colors, GlobalStyles, Metrics } from "../../theme";
+import { SCREENS } from "../../navigation/screenNames";
 
 const DashboardScreen = ({ navigation, route }) => {
   const userName = route?.params?.userName ?? "Jitendra Mandal";
@@ -81,10 +82,24 @@ const DashboardScreen = ({ navigation, route }) => {
               style={styles.investButton}
               activeOpacity={0.7}
               onPress={() =>
-                navigation?.navigate("Shared", { screen: "InvestDashboard" })
+                navigation?.navigate("Shared", {
+                  screen: SCREENS.INVEST_DASHBOARD,
+                })
               }
             >
               <Text style={styles.investButtonText}>Invest More ▸</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.investButton}
+              activeOpacity={0.7}
+              onPress={() =>
+                navigation?.navigate("Shared", {
+                  screen: SCREENS.WITHDRAW_INTRO,
+                })
+              }
+            >
+              <Text style={styles.investButtonText}>Withdraw </Text>
             </TouchableOpacity>
 
             {/* Claim Benefits */}
@@ -139,24 +154,37 @@ const DashboardScreen = ({ navigation, route }) => {
         onItemPress={(itemId) => {
           setDrawerOpen(false);
           const navMap = {
-            account: "AccountDetails",
-            preferences: "UserPreferences",
-            nominee: "NomineeDetails",
-            security: "Permission",
-            mission: "MissionVision",
-            identity: "IdentityVerification",
-            bookAppointment: ["Shared", { screen: "BookAppointment" }],
-            about: "About",
-            aboutGullak: "AboutTrueGold",
-            deleteAccount: "DeleteAccount",
-            reports: "Reports",
+            dashboard: SCREENS.DASHBOARD,
+            account: SCREENS.ACCOUNT_DETAILS,
+            preferences: SCREENS.USER_PREFERENCES,
+            nominee: SCREENS.NOMINEE_DETAILS,
+            security: SCREENS.PERMISSION,
+            mission: SCREENS.MISSION_VISION,
+            identity: SCREENS.IDENTITY_VERIFICATION,
+            bookAppointment: SCREENS.BOOK_APPOINTMENT,
+            assetPrices: SCREENS.GOLD_PRICE_CHART,
+            about: SCREENS.ABOUT,
+            aboutGullak: SCREENS.ABOUT_TRUEGOLD,
+            deleteAccount: SCREENS.DELETE_ACCOUNT,
+            reports: SCREENS.REPORTS,
+            // new mappings for drawer items (navigate directly)
+            goldDelivery: SCREENS.GOLD_DELIVERY,
+            goldPriceChart: SCREENS.GOLD_PRICE_CHART,
+            referral: SCREENS.REFERRAL,
+            rewards: SCREENS.REWARDS,
+            settings: SCREENS.SETTINGS,
+            // app settings & utilities
+            autopay: SCREENS.AUTOPAYS,
+            snapsave: SCREENS.SNAPSAVE,
+            saveonspend: SCREENS.SAVE_ON_SPEND,
+            helpSupport: SCREENS.HELP_SUPPORT,
           };
           if (navigation) {
             const navTarget = navMap[itemId];
             if (Array.isArray(navTarget)) {
               navigation.navigate(...navTarget);
             } else {
-              navigation.navigate(navTarget || "Profile");
+              navigation.navigate(navTarget || SCREENS.PROFILE);
             }
           }
         }}

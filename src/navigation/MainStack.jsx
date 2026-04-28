@@ -14,7 +14,20 @@ import {
   DashboardScreen,
   DeleteAccountScreen,
   DownloadReceiptScreen,
+  GoldDeliveryScreen,
+  GoldPriceChartScreen,
+  ReferralScreen,
+  RewardsScreen,
+  SettingsScreen,
+  HelpSupportScreen,
+  SnapSaveScreen,
+  SaveOnSpendScreen,
   ExpertProfileScreen,
+  WithdrawIntroScreen,
+  ChooseCoinScreen,
+  CartSummaryScreen,
+  AddressScreen,
+  WithdrawCheckoutScreen,
   GoldAnalysisReportScreen,
   GoldRecordsDetailsScreen,
   GoldRecordsScreen,
@@ -50,6 +63,94 @@ const HomeStack = () => (
     <Stack.Screen
       name={SCREENS.ACCOUNT_DETAILS}
       component={AccountDetailsScreen}
+    />
+    <Stack.Screen
+      name={SCREENS.GOLD_DELIVERY}
+      component={GoldDeliveryScreen}
+      options={{
+        headerShown: true,
+        title: "Gold Delivery",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.GOLD_PRICE_CHART}
+      component={GoldPriceChartScreen}
+      options={{
+        headerShown: true,
+        title: "Gold Price",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.REFERRAL}
+      component={ReferralScreen}
+      options={{
+        headerShown: true,
+        title: "Refer & Earn",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.REWARDS}
+      component={RewardsScreen}
+      options={{
+        headerShown: true,
+        title: "Rewards",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.SETTINGS}
+      component={SettingsScreen}
+      options={{
+        headerShown: true,
+        title: "Settings",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.HELP_SUPPORT}
+      component={HelpSupportScreen}
+      options={{
+        headerShown: true,
+        title: "Help & Support",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.SNAPSAVE}
+      component={SnapSaveScreen}
+      options={{
+        headerShown: true,
+        title: "SnapSave",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.SAVE_ON_SPEND}
+      component={SaveOnSpendScreen}
+      options={{
+        headerShown: true,
+        title: "Save on Every Spend",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
     />
     <Stack.Screen
       name={SCREENS.USER_PREFERENCES}
@@ -202,7 +303,61 @@ const SharedStack = () => (
       name={SCREENS.INVEST_DASHBOARD}
       component={InvestDashboardScreen}
     />
-    <Stack.Screen name={SCREENS.CHECKOUT} component={CheckoutScreen} />
+    <Stack.Screen
+      name={SCREENS.WITHDRAW_INTRO}
+      component={WithdrawIntroScreen}
+      options={{
+        headerShown: true,
+        title: "Unlock Vault",
+        headerStyle: { backgroundColor: Colors.goldLight },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.CHOOSE_COIN}
+      component={ChooseCoinScreen}
+      options={{
+        headerShown: true,
+        title: "Choose coin",
+        headerStyle: { backgroundColor: Colors.secondary },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.CART_SUMMARY}
+      component={CartSummaryScreen}
+      options={{
+        headerShown: true,
+        title: "Your Cart Summary",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.ADD_ADDRESS}
+      component={AddressScreen}
+      options={{
+        headerShown: true,
+        title: "Add Address",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS.WITHDRAW_CHECKOUT}
+      component={WithdrawCheckoutScreen}
+      options={{
+        headerShown: true,
+        title: "Checkout",
+        headerStyle: { backgroundColor: Colors.white },
+        headerTintColor: Colors.primaryDark,
+        headerTitleStyle: { fontWeight: "700" },
+      }}
+    />
     <Stack.Screen name={SCREENS.SET_AUTOPAY} component={SetAutopayScreen} />
     <Stack.Screen name={SCREENS.SIP_STEP_UP} component={SIPStepUpScreen} />
     <Stack.Screen name={SCREENS.SIP_SUCCESS} component={SIPSuccessScreen} />

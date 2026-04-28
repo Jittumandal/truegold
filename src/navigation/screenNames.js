@@ -50,6 +50,23 @@ export const SCREENS = {
   TRANSACTION_FAILED: 'TransactionFailed',
   DOWNLOAD_RECEIPT: 'DownloadReceipt',
 
+  // Withdraw / Checkout Flow
+  WITHDRAW_INTRO: 'WithdrawIntro',
+  CHOOSE_COIN: 'ChooseCoin',
+  CART_SUMMARY: 'CartSummary',
+  ADD_ADDRESS: 'AddAddress',
+  WITHDRAW_CHECKOUT: 'WithdrawCheckout',
+
+  // Additional Pages
+  GOLD_DELIVERY: 'GoldDelivery',
+  GOLD_PRICE_CHART: 'GoldPriceChart',
+  REFERRAL: 'Referral',
+  REWARDS: 'Rewards',
+  SETTINGS: 'Settings',
+  HELP_SUPPORT: 'HelpSupport',
+  SNAPSAVE: 'SnapSave',
+  SAVE_ON_SPEND: 'SaveOnSpend',
+
   // Splash
   SPLASH: 'Splash',
 
